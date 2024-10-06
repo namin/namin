@@ -31,7 +31,7 @@
 <span class="wrd tagcloud3" id="32"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Areasoning">[reasoning]</a></span>
 <span class="wrd tagcloud6" id="33"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Areflection">[reflection]</a></span>
 <span class="wrd tagcloud5" id="34"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Ascala">[Scala]</a></span>
-<span class="wrd tagcloud10" style="font-size: xx-large;" id="35"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Ascheme">[Scheme]</a></span>
+<span class="wrd tagcloud10" id="35"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Ascheme">[Scheme]</a></span>
 <span class="wrd tagcloud3" id="36"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Asmt">[Satisfiability Modulo Theories]</a></span>
 <span class="wrd tagcloud3" id="36"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+fork%3Atrue+topic%3Asynthesis">[synthesis]</a></span>
 <span class="wrd tagcloud0" id="37"><a href="https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Atabling">[tabling]</a></span>
