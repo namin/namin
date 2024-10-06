@@ -24,6 +24,24 @@ import requests
 import requests_cache
 requests_cache.install_cache('github_cache')
 
+def number_to_bar(num):
+    if num <= 2:
+        return '▁'
+    elif num <= 4:
+        return '▂'
+    elif num <= 6:
+        return '▃'
+    elif num <= 8:
+        return '▄'
+    elif num <= 10:
+        return '▅'
+    elif num <= 12:
+        return '▆'
+    elif num <= 14:
+        return '▇'
+    else:
+        return '█'
+
 # Get the GitHub token from environment variables
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 
@@ -87,7 +105,7 @@ for repo in repos_with_topics:
         topic_to_repos[topic].append(repo)
 
 # Step 4: Sort topics by repo count
-sorted_topics = sorted(topic_to_repos.items(), key=lambda item: len(item[1]), reverse=True)
+sorted_topics = sorted(topic_to_repos.items(), key=lambda item: (len(item[1]), item[0]), reverse=True)
 
 # Step 5: Generate markdown with search URLs for each topic with at least two repos
 for topic, repos in sorted_topics:
@@ -96,4 +114,5 @@ for topic, repos in sorted_topics:
     users = set([repo['owner']['login'] for repo in repos])
     org_user_search = "+".join([f"user%3A{user}" for user in users])
     search_url = f"https://github.com/search?q={org_user_search}+fork%3Atrue+topic%3A{topic}"
-    print(f"[{topic}]({search_url}) ({len(repos)})")
+    count = len(repos)
+    print(f"{number_to_bar(count)}<sup><sub>{count}</sub></sup> [{topic}]({search_url})")
