@@ -7,8 +7,12 @@ is linked to a GitHub search URL, focused on the organizations and user accounts
 repositories for that topic.
 
 How to run:
-1. Ensure that you have Python installed.
-2. Install the `requests` library if you don't have it: `pip install requests`.
+1. Ensure that you have Python installed:
+   - `conda create -n requests python=3.10`
+   - `conda activate requests`
+2. Install the `requests` and `requests-cache` libraries if you don't have them:
+   - `pip install requests`
+   - `pip install request`
 3. Set the following environment variables:
    - `GITHUB_TOKEN`: Your GitHub personal access token with the necessary permissions (e.g., `public_repo` scope).
    - `GITHUB_USER`: The GitHub username for which you want to fetch starred and contributed repositories.
@@ -17,6 +21,8 @@ How to run:
 
 import os
 import requests
+import requests_cache
+requests_cache.install_cache('github_cache')
 
 # Get the GitHub token from environment variables
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
@@ -80,11 +86,14 @@ for repo in repos_with_topics:
             topic_to_repos[topic] = []
         topic_to_repos[topic].append(repo)
 
-# Step 4: Filter out tags that only have one repo
-filtered_topics = {topic: repos for topic, repos in topic_to_repos.items() if len(repos) > 1}
+# Step 4: Sort topics by repo count
+sorted_topics = sorted(topic_to_repos.items(), key=lambda item: len(item[1]), reverse=True)
 
-# Step 5: Generate markdown with search URLs for each remaining topic
+# Step 5: Generate markdown with search URLs for each topic with at least two repos
 for topic, repos in filtered_topics.items():
-    org_user_search = "+".join([f"user%3A{repo['owner']['login']}" for repo in repos])
-    search_url = f"https://github.com/search?q={org_user_search}+topic%3A{topic}"
+    if len(repos) <= 1:
+        break
+    users = set([repo['owner']['login'] for repo in repos])
+    org_user_search = "+".join([f"user%3A{user}" for user in users])
+    search_url = f"https://github.com/search?q={org_user_search}+fork%3Atrue+topic%3A{topic}"
     print(f"[{topic}]({search_url}) ({len(repos)})")
