@@ -44,9 +44,9 @@ Project tags:
 [[verification](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Averification)]
 
 Programming Languages:
-[Scala](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScala)
-[Scheme](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScheme)
-[Coq](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ACoq)
-[Common Lisp](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ACommon-Lisp)
-[C](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AC)
+[Scala](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScala),
+[Scheme](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScheme),
+[Coq](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ACoq),
+[Common Lisp](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ACommon-Lisp),
+[C](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AC),
 [Dafny](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ADafny)
