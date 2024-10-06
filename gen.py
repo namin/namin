@@ -108,6 +108,7 @@ for repo in repos_with_topics:
 sorted_topics = sorted(topic_to_repos.items(), key=lambda item: (-len(item[1]), item[0]))
 
 # Step 5: Generate markdown with search URLs for each topic with at least two repos
+print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
 for topic, repos in sorted_topics:
     if len(repos) <= 1:
         break
@@ -115,4 +116,4 @@ for topic, repos in sorted_topics:
     org_user_search = "+".join([f"user%3A{user}" for user in users])
     search_url = f"https://github.com/search?q={org_user_search}+fork%3Atrue+topic%3A{topic}"
     count = len(repos)
-    print(f"{number_to_bar(count)}<sup><sub>{count}</sub></sup>[{topic}]({search_url})")
+    print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
