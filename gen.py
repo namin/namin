@@ -24,24 +24,6 @@ import requests
 import requests_cache
 requests_cache.install_cache('github_cache')
 
-def number_to_bar(num):
-    if num <= 2:
-        return '▁'
-    elif num <= 4:
-        return '▂'
-    elif num <= 6:
-        return '▃'
-    elif num <= 8:
-        return '▄'
-    elif num <= 10:
-        return '▅'
-    elif num <= 12:
-        return '▆'
-    elif num <= 14:
-        return '▇'
-    else:
-        return '█'
-
 # Get the GitHub token from environment variables
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 
