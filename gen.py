@@ -115,4 +115,4 @@ for topic, repos in sorted_topics:
     org_user_search = "+".join([f"user%3A{user}" for user in users])
     search_url = f"https://github.com/search?q={org_user_search}+fork%3Atrue+topic%3A{topic}"
     count = len(repos)
-    print(f"⭐<sup><sub>{count}</sub></sup>[{topic}]({search_url})")
+    print(f"☆<sup><sub>{count}</sub></sup>[{topic}]({search_url})")
