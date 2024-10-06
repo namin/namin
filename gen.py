@@ -105,7 +105,7 @@ for repo in repos_with_topics:
         topic_to_repos[topic].append(repo)
 
 # Step 4: Sort topics by repo count
-sorted_topics = sorted(topic_to_repos.items(), key=lambda item: (len(-item[1]), item[0]))
+sorted_topics = sorted(topic_to_repos.items(), key=lambda item: (-len(item[1]), item[0]))
 
 # Step 5: Generate markdown with search URLs for each topic with at least two repos
 for topic, repos in sorted_topics:
