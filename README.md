@@ -13,7 +13,7 @@
 [Scheme](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScheme)
 [Twelf](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Atwelf)
 
-[abstract interpretation](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aabstract-interpretation")
+[abstract interpretation](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aabstract-interpretation&type=repositories)
 [ai](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aai)
 [collapsing-towers](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Acollapsing-towers)
 [compiler](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Acompiler)
