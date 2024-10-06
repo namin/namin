@@ -1,4 +1,4 @@
-Project tags:
+by project tag:
 [abstract interpretation](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aabstract-interpretation")
 [ai](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aai)
 [Clojure](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aclojure)
@@ -43,7 +43,7 @@ Project tags:
 [Twelf](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Atwelf)
 [verification](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Averification)
 
-Programming Languages:
+by programming language:
 [Scala](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScala)
 [Scheme](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScheme)
 [Coq](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ACoq)
