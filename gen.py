@@ -90,7 +90,7 @@ for repo in repos_with_topics:
 sorted_topics = sorted(topic_to_repos.items(), key=lambda item: len(item[1]), reverse=True)
 
 # Step 5: Generate markdown with search URLs for each topic with at least two repos
-for topic, repos in filtered_topics.items():
+for topic, repos in sorted_topics:
     if len(repos) <= 1:
         break
     users = set([repo['owner']['login'] for repo in repos])
