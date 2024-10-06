@@ -15,7 +15,7 @@
 
 [abstract interpretation](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aabstract-interpretation")
 [ai](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aai)
-[collapse-towers](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Acollapse-towers)
+[collapsing-towers](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Acollapsing-towers)
 [compiler](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Acompiler)
 [comm. boot.](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Acommunication-bootstrapping)
 [composition](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Acomposition)
