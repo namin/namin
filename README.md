@@ -1,7 +1,4 @@
-# Projects
-
-## ... by Tags
-
+Project tags:
 [[abstract interpretation](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aabstract-interpretation")]
 [[ai](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aai)]
 [[Clojure](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Aclojure)]
@@ -46,34 +43,10 @@
 [[Twelf](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Atwelf)]
 [[verification](https://github.com/search?q=user%3Anamin+user%3Ametareflection+user%3Ascala-lms+fork%3Atrue+topic%3Averification)]
 
-
-## by Languages
-
+Programming Languages:
 [Scala](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScala)
 [Scheme](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AScheme)
 [Coq](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ACoq)
 [Common Lisp](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ACommon-Lisp)
 [C](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3AC)
 [Dafny](https://github.com/search?q=user%3Anamin+fork%3Atrue+fork%3Atrue+topic%3ADafny)
-
-## ... by Research Topics
-
-- [Generative programming]()  
-  writing programs that write programs...
-- [Logic & relational programming]()  
-  can we think in terms of relations rather than functions?
-- [Meta-theory]()  
-  type-theoretic foundations for languages like Scala, for language virtualization, for multi-stage programming,  ...
-- [Reflection]()  
-  building self-reflecting and self-adapting processes, meta-level architectures, ...
-- [Satisfiability Modulo Theories (SMT)]()  
-  how can we put powerful tools like z3 and CVC4 to work?
-- [Artificial Intelligence]()  
-  reviving some old school AI. How can we combine it with deep learning for neuro-symbolic systems?
-- [Application to Precision Medicine]()  
-  how can we apply ideas from Programming Languages and Artificial Intelligence to medical discovery and drug repurposing?
-
-## ... as Software
-
-- [io.livecode.ch](https://io.livecode.ch)
-- Contributions include Scala (EPFL), Closure Compiler (Google), Micado (CAG CSAIL), Cytoscape (Ideker Lab).
