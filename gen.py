@@ -159,7 +159,7 @@ for topic, repos in sorted_topics:
         search_text = " ".join([f"repo:{repo['full_name']}" for repo in repos])
     else:
         users = sorted(set([repo['owner']['login'] for repo in repos]))
-        org_user_search = " ".join([f"user%3A{user}" for user in users])
+        org_user_search = " ".join([f"user:{user}" for user in users])
         search_text = f"{org_user_search} topic:{topic} fork:true"
     search_encoded = urllib.parse.quote_plus(search_text)
     search_url = f"https://github.com/search?q={search_encoded}&type=repositories"
