@@ -36,6 +36,37 @@ HEADERS = {
 
 username = os.environ.get('GITHUB_USER', 'namin')
 
+# HTML-specific utilities
+generate_html = os.environ.get('GITHUB_GEN_HTML', False)
+
+# Predefined list of programming languages
+PROGRAMMING_LANGUAGES = {
+    'minikanren', 'racket', 'common-lisp', 'coq', 'dafny',
+    'python', 'java', 'javascript', 'typescript', 'ruby', 'go', 'rust', 'scala',
+    'haskell', 'perl', 'php', 'c', 'c++', 'c#', 'r', 'swift', 'kotlin',
+    'objective-c', 'shell', 'bash', 'lua', 'dart', 'elixir', 'clojure', 'erlang',
+    'fsharp', 'fortran', 'scheme', 'lisp', 'ocaml', 'prolog', 'matlab', 'julia'
+}
+
+# Predefined list of ad-hoc topic titles
+TOPIC_TITLES = {
+    'ai': 'AI',
+    'llm': 'LLMs',
+    'minikanren' : 'miniKanren',
+    'multi-stage-programming': 'Staging',
+    'ncats-translator': 'NCATS',
+    'oop': 'OOP',
+}
+
+def capitalize(text):
+    # capitalize first letter, and after each hyphen
+    words = text.split('-')
+    capitalized_words = ['-'.join([word.capitalize() for word in words])]
+    return ''.join(capitalized_words)
+
+def pretty_title(topic):
+    return TOPIC_TITLES.get(topic, capitalize(topic))
+
 # Function to check if the user has contributed to the repository
 def has_contributed_to_repo(owner, repo):
     contributors_url = f'https://api.github.com/repos/{owner}/{repo}/contributors'
@@ -112,19 +143,29 @@ for repo in repos_with_stars:
         topic_to_repos[topic].append(repo)
 
 # Step 4: Sort topics by repo count
-sorted_topics = sorted(topic_to_repos.items(), key=lambda item: (-len(item[1]), item[0]))
+if generate_html:
+    sorted_key=lambda item: item[0]
+else:
+    sorted_key=lambda item: (-len(item[1]), item[0])
+sorted_topics = sorted(topic_to_repos.items(), key=sorted_key)
 
-# Step 5: Generate markdown with search URLs for each topic with at least two repos
-print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
+# Step 5: Generate formatted results (markdown or HTML) with search URLs for each topic with at least two repos
+if not generate_html:
+    print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
 for topic, repos in sorted_topics:
     if len(repos) <= 1:
-        break
+        continue
     if topic in forked_topics:
         search_text = " ".join([f"repo:{repo['full_name']}" for repo in repos])
     else:
         users = sorted(set([repo['owner']['login'] for repo in repos]))
-        org_user_search = "+".join([f"user%3A{user}" for user in users])
+        org_user_search = " ".join([f"user%3A{user}" for user in users])
         search_text = f"{org_user_search} topic:{topic} fork:true"
     search_encoded = urllib.parse.quote_plus(search_text)
+    search_url = f"https://github.com/search?q={search_encoded}&type=repositories"
     count = len(repos)
-    print(f"[{topic}](https://github.com/search?q={search_encoded}&type=repositories)<sup><sub>{count}</sub></sup>")
+    if generate_html:
+        topic_class = "programming-language" if topic.lower() in PROGRAMMING_LANGUAGES else ""
+        print(f"""<span class="count{count} {topic_class}"><a href="{search_url}">{pretty_title(topic)}</a></span>""")
+    else:
+        print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
