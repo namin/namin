@@ -124,7 +124,7 @@ for topic, repos in sorted_topics:
     else:
         users = sorted(set([repo['owner']['login'] for repo in repos]))
         org_user_search = "+".join([f"user%3A{user}" for user in users])
-        search_text = f"{org_user_search} topic:{topic}"
-    search_encoded = urllib.parse.quote_plus(search_text+" fork:true")
+        search_text = f"{org_user_search} topic:{topic} fork:true"
+    search_encoded = urllib.parse.quote_plus(search_text)
     count = len(repos)
     print(f"[{topic}](https://github.com/search?q={search_encoded})<sup><sub>{count}</sub></sup>")
