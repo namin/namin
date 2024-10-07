@@ -120,11 +120,11 @@ for topic, repos in sorted_topics:
     if len(repos) <= 1:
         break
     if topic in forked_topics:
-        search_text = " OR ".join([f"repo:{repo['full_name']}" for repo in repos])
+        search_text = " ".join([f"repo:{repo['full_name']}" for repo in repos])
     else:
         users = sorted(set([repo['owner']['login'] for repo in repos]))
         org_user_search = "+".join([f"user%3A{user}" for user in users])
-        search_text = f"{org_user_search} fork:true topic:{topic}"
-    search_encoded = urllib.parse.quote_plus(search_text)
+        search_text = f"{org_user_search} topic:{topic}"
+    search_encoded = urllib.parse.quote_plus(search_text+" fork:true")
     count = len(repos)
     print(f"[{topic}](https://github.com/search?q={search_encoded})<sup><sub>{count}</sub></sup>")
