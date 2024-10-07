@@ -127,4 +127,4 @@ for topic, repos in sorted_topics:
         search_text = f"{org_user_search} topic:{topic} fork:true"
     search_encoded = urllib.parse.quote_plus(search_text)
     count = len(repos)
-    print(f"[{topic}](https://github.com/search?q={search_encoded})<sup><sub>{count}</sub></sup>")
+    print(f"[{topic}](https://github.com/search?q={search_encoded}&type=repositories)<sup><sub>{count}</sub></sup>")
