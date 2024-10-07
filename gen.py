@@ -1,10 +1,18 @@
-"""
-This script, developed with the help of ChatGPT-4o, identifies topics (tags) of repositories
-that a given GitHub user has both starred and contributed to, across various organizations
-and user accounts. It groups the repositories by their topics, sorts the topics by the number
-of associated repositories, and only includes topics with at least two repositories. Each topic
-is linked to a GitHub search URL, focused on the organizations and user accounts of the included
-repositories for that topic.
+"""This script, developed with the help of ChatGPT-4o, identifies
+topics (tags) of repositories that a given GitHub user has both
+starred and contributed to, across various organizations and user
+accounts. It groups the repositories by their topics, only includes
+topics with at least two repositories. Each topic is linked to a
+GitHub search URL, focused on the organizations and user accounts of
+the included repositories for that topic.
+
+The result are formatted in markdown or HTML. The markdown sorts the
+topics by by the number of associated repositories. The HTML generates
+an alphabetic word cloud, using CSS classes for the `count_N_` of each
+topic and for marking each `programming-language` topic.  The topics
+are also prettified by an ad-hoc mapping, or capitalization after each
+hyphen by default. The ad-hoc logic is hard-coded into Python data
+constants, PROGRAMMING_LANGUAGES and TOPIC_TITLES below.
 
 How to run:
 1. Ensure that you have Python installed:
@@ -17,6 +25,7 @@ How to run:
    - `GITHUB_TOKEN`: Your GitHub personal access token with the necessary permissions (e.g., `public_repo` scope).
    - `GITHUB_USER`: The GitHub username for which you want to fetch starred and contributed repositories.
 4. Run the script: `python gen.py`
+
 """
 
 import os
