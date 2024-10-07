@@ -165,8 +165,10 @@ for topic, repos in sorted_topics:
     if len(repos) <= 1:
         continue
     if topic in forked_topics:
+        is_forked_topic = True
         search_text = " ".join([f"repo:{repo['full_name']}" for repo in repos])
     else:
+        is_forked_topic = False
         users = sorted(set([repo['owner']['login'] for repo in repos]))
         org_user_search = " ".join([f"user:{user}" for user in users])
         search_text = f"{org_user_search} topic:{topic} fork:true"
@@ -174,7 +176,9 @@ for topic, repos in sorted_topics:
     search_url = f"https://github.com/search?q={search_encoded}&type=repositories"
     count = len(repos)
     if generate_html:
-        topic_class = "programming-language" if topic.lower() in PROGRAMMING_LANGUAGES else ""
+        topic_class = "programming-language " if topic.lower() in PROGRAMMING_LANGUAGES else ""
+        topic_class += "forked-topic " if is_forked_topic else ""
         print(f"""<span class="count{count} {topic_class}"><a href="{search_url}">{pretty_title(topic)}</a></span>""")
     else:
-        print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
+        formatted_topic = f"_{topic}_" if is_forked_topic else topic
+        print(f"[{formatted_topic}]({search_url})<sup><sub>{count}</sub></sup>")
