@@ -1,9 +1,9 @@
 """
 This script, developed with the help of ChatGPT-4o, identifies topics (tags) of repositories
-that a given GitHub user has both starred and contributed to, across various organizations 
-and user accounts. It groups the repositories by their topics, sorts the topics by the number 
-of associated repositories, and only includes topics with at least two repositories. Each topic 
-is linked to a GitHub search URL, focused on the organizations and user accounts of the included 
+that a given GitHub user has both starred and contributed to, across various organizations
+and user accounts. It groups the repositories by their topics, sorts the topics by the number
+of associated repositories, and only includes topics with at least two repositories. Each topic
+is linked to a GitHub search URL, focused on the organizations and user accounts of the included
 repositories for that topic.
 
 How to run:
@@ -50,18 +50,18 @@ def has_contributed_to_repo(owner, repo):
 def get_all_starred_repos():
     all_starred_repos = []
     starred_repos_url = f'https://api.github.com/users/{username}/starred'
-    
+
     while starred_repos_url:
         response = requests.get(starred_repos_url, headers=HEADERS)
         if response.status_code != 200:
             print(f"Error: {response.status_code}, {response.json()}")
             break
-        
+
         all_starred_repos.extend(response.json())
-        
+
         # Check if there's a next page
         starred_repos_url = response.links.get('next', {}).get('url')
-    
+
     return all_starred_repos
 
 starred_repos = get_all_starred_repos()
@@ -78,7 +78,7 @@ for repo in starred_repos:
 def get_repo_for_user(user_or_org, repo_name):
     url = f'https://api.github.com/repos/{user_or_org}/{repo_name}'
     response = requests.get(url, headers=HEADERS)
-    
+
     if response.status_code == 200:
         return response.json()  # The repo object
     elif response.status_code == 404:
@@ -101,7 +101,7 @@ def get_effective_topics(repo):
                 forked_topics = forked_topics.union(set(user_topics))
                 return user_topics
     return topics
-    
+
 topic_to_repos = {}
 for repo in repos_with_stars:
     topics = get_effective_topics(repo)
@@ -123,6 +123,6 @@ for topic, repos in sorted_topics:
     else:
         users = sorted(set([repo['owner']['login'] for repo in repos]))
         org_user_search = "+".join([f"user%3A{user}" for user in users])
-        search_url = f"https://github.com/search?q={org_user_search}+fork%3Atrue+topic%3A{topic}"
+        search_url = f"{org_user_search}+fork%3Atrue+topic%3A{topic}"
     count = len(repos)
-    print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
+    print(f"[{topic}](https://github.com/search?q={search_url})<sup><sub>{count}</sub></sup>")
