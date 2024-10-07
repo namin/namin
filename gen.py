@@ -68,19 +68,43 @@ starred_repos = get_all_starred_repos()
 
 # Step 2: Filter repositories where the user has contributed
 repos_with_stars = []
-repos_with_topics = []
 for repo in starred_repos:
     owner = repo['owner']['login']
     repo_name = repo['name']
     if has_contributed_to_repo(owner, repo_name):
         repos_with_stars.append(repo)
-        if 'topics' in repo and repo['topics']:
-            repos_with_topics.append(repo)
 
 # Step 3: Organize repositories by topic
-topic_to_repos = {}
-for repo in repos_with_topics:
+def get_repo_for_user(user_or_org, repo_name):
+    url = f'https://api.github.com/repos/{user_or_org}/{repo_name}'
+    response = requests.get(url, headers=HEADERS)
+    
+    if response.status_code == 200:
+        return response.json()  # The repo object
+    elif response.status_code == 404:
+        return None
+    else:
+        print(f"Error: {response.status_code}, {response.json()}")
+        return None
+
+forked_topics = set()
+def get_effective_topics(repo):
+    global forked_topics
     topics = repo.get('topics', [])
+    if not topics and repo['owner']['login'] != username:
+        user_repo = get_repo_for_user(username, repo['name'])
+        if user_repo:
+            #print(f"info: user has forked starred repo: {repo['full_name']}")
+            user_topics = user_repo.get('topics', [])
+            if user_topics:
+                #print(f"warnign: forked topics {user_topics} for upstream repo {repo['full_name']}")
+                forked_topics = forked_topics.union(set(user_topics))
+                return user_topics
+    return topics
+    
+topic_to_repos = {}
+for repo in repos_with_stars:
+    topics = get_effective_topics(repo)
     for topic in topics:
         if topic not in topic_to_repos:
             topic_to_repos[topic] = []
@@ -94,8 +118,11 @@ print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
 for topic, repos in sorted_topics:
     if len(repos) <= 1:
         break
-    users = set([repo['owner']['login'] for repo in repos])
-    org_user_search = "+".join([f"user%3A{user}" for user in users])
-    search_url = f"https://github.com/search?q={org_user_search}+fork%3Atrue+topic%3A{topic}"
+    if topic in forked_topics:
+        search_url = " OR ".join([f"repo:{repo['full_name']}" for repo in repos])
+    else:
+        users = sorted(set([repo['owner']['login'] for repo in repos]))
+        org_user_search = "+".join([f"user%3A{user}" for user in users])
+        search_url = f"https://github.com/search?q={org_user_search}+fork%3Atrue+topic%3A{topic}"
     count = len(repos)
     print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
