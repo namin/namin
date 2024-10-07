@@ -23,6 +23,7 @@ import os
 import requests
 import requests_cache
 requests_cache.install_cache('github_cache')
+import urllib.parse
 
 # Get the GitHub token from environment variables
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
@@ -119,10 +120,11 @@ for topic, repos in sorted_topics:
     if len(repos) <= 1:
         break
     if topic in forked_topics:
-        search_url = " OR ".join([f"repo:{repo['full_name']}" for repo in repos])
+        search_text = " OR ".join([f"repo:{repo['full_name']}" for repo in repos])
     else:
         users = sorted(set([repo['owner']['login'] for repo in repos]))
         org_user_search = "+".join([f"user%3A{user}" for user in users])
-        search_url = f"{org_user_search}+fork%3Atrue+topic%3A{topic}"
+        search_text = f"{org_user_search} fork:true topic:{topic}"
+    search_encoded = urllib.parse.quote_plus(search_text)
     count = len(repos)
-    print(f"[{topic}](https://github.com/search?q={search_url})<sup><sub>{count}</sub></sup>")
+    print(f"[{topic}](https://github.com/search?q={search_encoded})<sup><sub>{count}</sub></sup>")
