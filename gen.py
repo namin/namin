@@ -4,7 +4,8 @@ starred and contributed to, across various organizations and user
 accounts. It groups the repositories by their topics, only includes
 topics with at least two repositories. Each topic is linked to a
 GitHub search URL, focused on the organizations and user accounts of
-the included repositories for that topic.
+the included repositories for that topic. For forks, topics are
+gathered from both the upstream repo and the user fork.
 
 The result are formatted in markdown or HTML. The markdown sorts the
 topics by by the number of associated repositories. The HTML generates
