@@ -45,6 +45,8 @@ HEADERS = {
 
 username = os.environ.get('GITHUB_USER', 'namin')
 
+generate_txt = os.environ.get('GITHUB_GEN_TXT', False)
+
 # HTML-specific utilities
 generate_html = os.environ.get('GITHUB_GEN_HTML', False)
 
@@ -159,7 +161,7 @@ else:
 sorted_topics = sorted(topic_to_repos.items(), key=sorted_key)
 
 # Step 5: Generate formatted results (markdown or HTML) with search URLs for each topic with at least two repos
-if not generate_html:
+if not generate_html and not generate_txt:
     print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
 for topic, repos in sorted_topics:
     if len(repos) <= 1:
@@ -179,6 +181,8 @@ for topic, repos in sorted_topics:
         topic_class = "programming-language " if topic.lower() in PROGRAMMING_LANGUAGES else ""
         topic_class += "forked-topic " if is_forked_topic else ""
         print(f"""<span class="count{count} {topic_class}"><a href="{search_url}">{pretty_title(topic)}</a></span>""")
+    elif generate_txt:
+        print(" ".join(topic for i in range(count)))
     else:
         formatted_topic = f"_{topic}_" if is_forked_topic else topic
         print(f"[{formatted_topic}]({search_url})<sup><sub>{count}</sub></sup>")
