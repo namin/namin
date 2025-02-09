@@ -161,12 +161,19 @@ else:
     sorted_key=lambda item: (-len(item[1]), item[0])
 sorted_topics = sorted(topic_to_repos.items(), key=sorted_key)
 
+def a_prefix(topic, prev_topics):
+    return any(topic.startswith(prev_topic) for prev_topic in prev_topics)
 # Step 5: Generate formatted results (markdown or HTML) with search URLs for each topic with at least two repos
+prev_topics = []
 if not generate_html and not generate_txt:
     print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
 for topic, repos in sorted_topics:
-    if len(repos) <= 0:
+    count = len(repos)
+    if count == 0:
         continue
+    if count <= 1 and a_prefix(topic, prev_topics):
+        continue
+    prev_topics.append(topic)
     if topic in forked_topics:
         is_forked_topic = True
         search_text = " ".join([f"repo:{repo['full_name']}" for repo in repos])
@@ -177,7 +184,6 @@ for topic, repos in sorted_topics:
         search_text = f"{org_user_search} topic:{topic} fork:true"
     search_encoded = urllib.parse.quote_plus(search_text)
     search_url = f"https://github.com/search?q={search_encoded}&type=repositories"
-    count = len(repos)
     if generate_html:
         topic_class = "programming-language " if topic.lower() in PROGRAMMING_LANGUAGES else ""
         topic_class += "forked-topic " if is_forked_topic else ""
