@@ -161,8 +161,8 @@ else:
     sorted_key=lambda item: (-len(item[1]), item[0])
 sorted_topics = sorted(topic_to_repos.items(), key=sorted_key)
 
-def a_prefix(topic, prev_topics):
-    return any(topic.startswith(prev_topic) for prev_topic in prev_topics)
+def within_topics(topic, topics):
+    return any(prev_topic in topic for prev_topic in prev_topics)
 # Step 5: Generate formatted results (markdown or HTML) with search URLs for each topic with at least two repos
 prev_topics = []
 if not generate_html and not generate_txt:
@@ -171,7 +171,7 @@ for topic, repos in sorted_topics:
     count = len(repos)
     if count == 0:
         continue
-    if count <= 1 and a_prefix(topic, prev_topics):
+    if count <= 1 and within_topics(topic, prev_topics):
         continue
     prev_topics.append(topic)
     if topic in forked_topics:
