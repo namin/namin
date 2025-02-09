@@ -54,7 +54,6 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [jupyter](https://github.com/search?q=user%3Aalishobeiri+topic%3Ajupyter+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [knowledge-base](https://github.com/search?q=user%3ABaranziniLab+topic%3Aknowledge-base+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [knowledge-graph](https://github.com/search?q=user%3ABaranziniLab+topic%3Aknowledge-graph+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
-[large-language-models](https://github.com/search?q=user%3ABaranziniLab+topic%3Alarge-language-models+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [lean](https://github.com/search?q=user%3Anamin+topic%3Alean+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [lisp](https://github.com/search?q=user%3Anamin+topic%3Alisp+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [llama](https://github.com/search?q=user%3ABaranziniLab+topic%3Allama+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
@@ -67,7 +66,6 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [prompt-tuning](https://github.com/search?q=user%3ABaranziniLab+topic%3Aprompt-tuning+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [pypy](https://github.com/search?q=user%3Apycket+topic%3Apypy+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [rag](https://github.com/search?q=user%3ABaranziniLab+topic%3Arag+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
-[retrieval-augmented-generation](https://github.com/search?q=user%3ABaranziniLab+topic%3Aretrieval-augmented-generation+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [theorem-prover](https://github.com/search?q=user%3Anamin+topic%3Atheorem-prover+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [tools](https://github.com/search?q=user%3AOoriData+topic%3Atools+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [twelf](https://github.com/search?q=user%3Anamin+topic%3Atwelf+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
