@@ -43,7 +43,6 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [differentiable-programming](https://github.com/search?q=user%3Anamin+topic%3Adifferentiable-programming+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [expert-system](https://github.com/search?q=user%3Anamin+topic%3Aexpert-system+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [formal-methods](https://github.com/search?q=user%3Amit-plv+topic%3Aformal-methods+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
-[generative](https://github.com/search?q=user%3Ajosephwilk+topic%3Agenerative+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [github](https://github.com/search?q=user%3Anamin+topic%3Agithub+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [gpt](https://github.com/search?q=user%3ABaranziniLab+topic%3Agpt+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [harmony](https://github.com/search?q=user%3Anamin+topic%3Aharmony+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
@@ -53,7 +52,6 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [jit](https://github.com/search?q=user%3Anamin+topic%3Ajit+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [jupyter](https://github.com/search?q=user%3Aalishobeiri+topic%3Ajupyter+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [knowledge-base](https://github.com/search?q=user%3ABaranziniLab+topic%3Aknowledge-base+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
-[knowledge-graph](https://github.com/search?q=user%3ABaranziniLab+topic%3Aknowledge-graph+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [lean](https://github.com/search?q=user%3Anamin+topic%3Alean+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [lisp](https://github.com/search?q=user%3Anamin+topic%3Alisp+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [llama](https://github.com/search?q=user%3ABaranziniLab+topic%3Allama+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
@@ -63,7 +61,6 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [program-transformations](https://github.com/search?q=user%3Anamin+topic%3Aprogram-transformations+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [programming-languages](https://github.com/search?q=user%3Amit-plv+topic%3Aprogramming-languages+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [prompt-engineering](https://github.com/search?q=user%3ABaranziniLab+topic%3Aprompt-engineering+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
-[prompt-tuning](https://github.com/search?q=user%3ABaranziniLab+topic%3Aprompt-tuning+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [pypy](https://github.com/search?q=user%3Apycket+topic%3Apypy+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [rag](https://github.com/search?q=user%3ABaranziniLab+topic%3Arag+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [theorem-prover](https://github.com/search?q=user%3Anamin+topic%3Atheorem-prover+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
