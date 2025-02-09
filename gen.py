@@ -165,7 +165,7 @@ sorted_topics = sorted(topic_to_repos.items(), key=sorted_key)
 if not generate_html and not generate_txt:
     print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
 for topic, repos in sorted_topics:
-    if len(repos) <= 1:
+    if len(repos) <= 0:
         continue
     if topic in forked_topics:
         is_forked_topic = True
