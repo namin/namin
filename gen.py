@@ -187,6 +187,10 @@ def within_topics(topic, topics):
     return any(prev_topic in topic or acronym(prev_topic, topic) or common_prefix(prev_topic, topic) for prev_topic in prev_topics)
 # Step 5: Generate formatted results (markdown or HTML) with search URLs for each topic with at least two repos
 prev_topics = []
+
+if generate_txt:
+    repo_stars = {}
+
 if not generate_html and not generate_txt:
     print(f"topics<sup><sub>(with count of selected projects)</sub></sup>:")
 for topic, repos in sorted_topics:
@@ -214,6 +218,14 @@ for topic, repos in sorted_topics:
         print(f"""<span class="count{count} {topic_class}"><a href="{search_url}">{pretty_title(topic)}</a></span>""")
     elif generate_txt:
         repo_list = ", ".join(repo['full_name'] for repo in repos)
+        for repo in repos:
+            repo_stars[repo['full_name']] = repo['stargazers_count']
         print(f"{topic}: {repo_list}")
     else:
         print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
+
+if generate_txt:
+    print('\n')
+    print('\n')
+    for k,v in repo_stars.items():
+        print(f"{k}: {v}")
