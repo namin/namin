@@ -200,5 +200,4 @@ for topic, repos in sorted_topics:
     elif generate_txt:
         print(" ".join(topic for i in range(count)))
     else:
-        formatted_topic = f"_{topic}_" if is_forked_topic else topic
-        print(f"[{formatted_topic}]({search_url})<sup><sub>{count}</sub></sup>")
+        print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
