@@ -132,16 +132,26 @@ def get_repo_for_user(user_or_org, repo_name):
         return None
 
 forked_topics = set()
+upstream_topics = set()
+userlevel_topics = set()
 def get_effective_topics(repo):
     global forked_topics
+    global upstream_topics
+    global userlevel_topics
     topics = repo.get('topics', [])
+
+    if repo['owner']['login'] != username:
+        upstream_topics = upstream_topics.union(set(topics))
+    else:
+        userlevel_topics = userlevel_topics.union(set(topics))
+
     if not topics and repo['owner']['login'] != username:
         user_repo = get_repo_for_user(username, repo['name'])
         if user_repo:
             #print(f"info: user has forked starred repo: {repo['full_name']}")
             user_topics = user_repo.get('topics', [])
             if user_topics:
-                #print(f"warnign: forked topics {user_topics} for upstream repo {repo['full_name']}")
+                #print(f"warning: forked topics {user_topics} for upstream repo {repo['full_name']}")
                 forked_topics = forked_topics.union(set(user_topics))
                 return user_topics
     return topics
@@ -182,6 +192,8 @@ for topic, repos in sorted_topics:
         continue
     #if count <= 1 and within_topics(topic, prev_topics):
     #    continue
+    if count <= 1 and topic in upstream_topics and topic not in userlevel_topics:
+        continue
     prev_topics.append(topic)
     if topic in forked_topics:
         is_forked_topic = True
