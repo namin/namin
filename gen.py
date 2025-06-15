@@ -213,6 +213,7 @@ for topic, repos in sorted_topics:
         topic_class += "forked-topic " if is_forked_topic else ""
         print(f"""<span class="count{count} {topic_class}"><a href="{search_url}">{pretty_title(topic)}</a></span>""")
     elif generate_txt:
-        print(" ".join(topic for i in range(count)))
+        repo_list = ", ".join(repo['full_name'] for repo in repos)
+        print(f"{topic}: {repo_list}")
     else:
         print(f"[{topic}]({search_url})<sup><sub>{count}</sub></sup>")
