@@ -228,4 +228,4 @@ if generate_txt:
     print('\n')
     print('\n')
     for k,v in repo_stars.items():
-        print(f"{k}: {v}")
+        print(f"{k} {v}")
