@@ -23,6 +23,7 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [c](https://github.com/search?q=user%3Anamin+user%3Ascala-lms+topic%3Ac+fork%3Atrue&type=repositories)<sup><sub>3</sub></sup>
 [constraints](https://github.com/search?q=user%3Anamin+topic%3Aconstraints+fork%3Atrue&type=repositories)<sup><sub>3</sub></sup>
 [meta-theory](https://github.com/search?q=user%3Anamin+topic%3Ameta-theory+fork%3Atrue&type=repositories)<sup><sub>3</sub></sup>
+[monte-carlo-tree-search](https://github.com/search?q=user%3Ametareflection+user%3Anamin+topic%3Amonte-carlo-tree-search+fork%3Atrue&type=repositories)<sup><sub>3</sub></sup>
 [music](https://github.com/search?q=repo%3Ajosephwilk%2Fmusical-creativity+repo%3Aovertone%2Fovertone+repo%3Anamin%2Fmetasolfeggio&type=repositories)<sup><sub>3</sub></sup>
 [oop](https://github.com/search?q=user%3Anamin+topic%3Aoop+fork%3Atrue&type=repositories)<sup><sub>3</sub></sup>
 [python](https://github.com/search?q=user%3Aalishobeiri+user%3Anamin+topic%3Apython+fork%3Atrue&type=repositories)<sup><sub>3</sub></sup>
@@ -31,7 +32,6 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [logic](https://github.com/search?q=user%3AIBM+user%3Anamin+topic%3Alogic+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
 [machine-learning](https://github.com/search?q=user%3AIBM+user%3AWecoAI+topic%3Amachine-learning+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
 [meta](https://github.com/search?q=user%3Anamin+topic%3Ameta+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
-[monte-carlo-tree-search](https://github.com/search?q=user%3Ametareflection+user%3Anamin+topic%3Amonte-carlo-tree-search+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
 [ncats-translator](https://github.com/search?q=user%3Anamin+user%3Awebyrd+topic%3Ancats-translator+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
 [prolog](https://github.com/search?q=user%3Anamin+topic%3Aprolog+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
 [smt](https://github.com/search?q=user%3Anamin+topic%3Asmt+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
