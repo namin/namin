@@ -180,8 +180,8 @@ for topic, repos in sorted_topics:
     count = len(repos)
     if count == 0:
         continue
-    if count <= 1 and within_topics(topic, prev_topics):
-        continue
+    #if count <= 1 and within_topics(topic, prev_topics):
+    #    continue
     prev_topics.append(topic)
     if topic in forked_topics:
         is_forked_topic = True
