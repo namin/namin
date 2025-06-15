@@ -142,18 +142,21 @@ def get_effective_topics(repo):
 
     if repo['owner']['login'] != username:
         upstream_topics = upstream_topics.union(set(topics))
+        user_repo = get_repo_for_user(username, repo['name'])
+        if user_repo:
+            if not topics:
+                #print(f"info: user has forked starred repo: {repo['full_name']}")
+                user_topics = user_repo.get('topics', [])
+                if user_topics:
+                    #print(f"warning: forked topics {user_topics} for upstream repo {repo['full_name']}")
+                    forked_topics = forked_topics.union(set(user_topics))
+                    return user_topics
+        else:
+            # include as user topic if the user writes directly to upstream
+            userlevel_topics = userlevel_topics.union(set(topics))
     else:
         userlevel_topics = userlevel_topics.union(set(topics))
 
-    if not topics and repo['owner']['login'] != username:
-        user_repo = get_repo_for_user(username, repo['name'])
-        if user_repo:
-            #print(f"info: user has forked starred repo: {repo['full_name']}")
-            user_topics = user_repo.get('topics', [])
-            if user_topics:
-                #print(f"warning: forked topics {user_topics} for upstream repo {repo['full_name']}")
-                forked_topics = forked_topics.union(set(user_topics))
-                return user_topics
     return topics
 
 topic_to_repos = {}

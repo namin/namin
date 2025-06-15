@@ -37,12 +37,14 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [smt](https://github.com/search?q=user%3Anamin+topic%3Asmt+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
 [truth-maintenance](https://github.com/search?q=user%3Ametareflection+user%3Anamin+topic%3Atruth-maintenance+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
 [tutorial](https://github.com/search?q=user%3Anamin+user%3Ascala-lms+topic%3Atutorial+fork%3Atrue&type=repositories)<sup><sub>2</sub></sup>
+[a-star-search](https://github.com/search?q=user%3Ametareflection+topic%3Aa-star-search+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [abstract-interpretation](https://github.com/search?q=user%3Anamin+topic%3Aabstract-interpretation+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [chatgpt](https://github.com/search?q=user%3Anamin+topic%3Achatgpt+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [communication-bootstrapping](https://github.com/search?q=user%3Anamin+topic%3Acommunication-bootstrapping+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [compiler](https://github.com/search?q=user%3Anamin+topic%3Acompiler+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [compiler-construction](https://github.com/search?q=user%3Anamin+topic%3Acompiler-construction+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [composition](https://github.com/search?q=user%3Anamin+topic%3Acomposition+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
+[coq-formalization](https://github.com/search?q=user%3AMetaRocq+topic%3Acoq-formalization+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [differentiable-programming](https://github.com/search?q=user%3Anamin+topic%3Adifferentiable-programming+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [discovery-system](https://github.com/search?q=user%3Anamin+topic%3Adiscovery-system+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [docker](https://github.com/search?q=user%3Anamin+topic%3Adocker+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
@@ -65,6 +67,7 @@ topics<sup><sub>(with count of selected projects)</sub></sup>:
 [plt-redex](https://github.com/search?q=user%3Anamin+topic%3Aplt-redex+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [program-transformations](https://github.com/search?q=user%3Anamin+topic%3Aprogram-transformations+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [proofsketcher](https://github.com/search?q=user%3Anamin+topic%3Aproofsketcher+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
+[rocq](https://github.com/search?q=user%3AMetaRocq+topic%3Arocq+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [theorem-prover](https://github.com/search?q=user%3Anamin+topic%3Atheorem-prover+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [twelf](https://github.com/search?q=user%3Anamin+topic%3Atwelf+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
 [unsound](https://github.com/search?q=user%3Anamin+topic%3Aunsound+fork%3Atrue&type=repositories)<sup><sub>1</sub></sup>
